@@ -8,6 +8,8 @@ PROTOCOLS_IO_ACCESS_TOKEN = os.environ['PROTOCOLS_IO_ACCESS_TOKEN']
 url = 'https://protocols.io/api/open/get_protocols'
 values = {
     'access_token': PROTOCOLS_IO_ACCESS_TOKEN,
+    'key': 'RNA',
+    'page_id': '2',
 }
 
 data = urllib.parse.urlencode(values).encode("utf-8")
