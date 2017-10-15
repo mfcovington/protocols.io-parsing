@@ -15,5 +15,7 @@ req = urllib.request.Request(url, data)
 response = urllib.request.urlopen(req)
 the_page = response.read()
 
+protocol_list = json.loads(the_page)['protocols']
+
 for protocol in protocol_list:
     print('{}: {}'.format(protocol['protocol_id'], protocol['protocol_name']))
