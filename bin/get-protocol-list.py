@@ -1,3 +1,4 @@
+import json
 import os
 import urllib.parse
 import urllib.request
@@ -14,4 +15,5 @@ req = urllib.request.Request(url, data)
 response = urllib.request.urlopen(req)
 the_page = response.read()
 
-print(the_page)
+for protocol in protocol_list:
+    print('{}: {}'.format(protocol['protocol_id'], protocol['protocol_name']))
