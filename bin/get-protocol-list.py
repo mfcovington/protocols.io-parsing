@@ -15,6 +15,9 @@ req = urllib.request.Request(url, data)
 response = urllib.request.urlopen(req)
 the_page = response.read()
 
+'There are {} protocols spanning {} pages.'.format(json.loads(
+    the_page)['total_results'], json.loads(the_page)['total_pages'])
+
 protocol_list = json.loads(the_page)['protocols']
 
 for protocol in protocol_list:
